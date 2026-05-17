@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop SwapnoRong - Modern, affordable fashion for men and women">
+    <title>Shop - স্বপ্নরঙ - SwapnoRong</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <p><i class="fas fa-phone"></i> +880 130 843 0614</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <h1>স্বপ্নরঙ</h1>
+                        <p class="tagline">Style Your Dreams</p>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="wishlist.html" class="icon-link">
+                            <i class="far fa-heart"></i>
+                            <span class="badge" id="wishlist-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="badge" id="cart-badge">0</span>
+                        </a>
+                        <button class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-header">
+                <h1>Shop Our Collection</h1>
+                <p>Find your perfect style</p>
+            </div>
+
+            <div class="shop-container">
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar">
+                    <div class="filters-toggle">
+                        <h3>Filters <button id="filters-close"><i class="fas fa-times"></i></button></h3>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="filter-group">
+                        <h4>Search</h4>
+                        <input type="text" id="search-input" placeholder="Search products..." class="search-box">
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="category-filter" value="" checked> All Categories</label>
+                            <label><input type="checkbox" class="category-filter" value="tshirts"> T-Shirts</label>
+                            <label><input type="checkbox" class="category-filter" value="shirts"> Shirts</label>
+                            <label><input type="checkbox" class="category-filter" value="pants"> Pants</label>
+                            <label><input type="checkbox" class="category-filter" value="hoodies"> Hoodies</label>
+                            <label><input type="checkbox" class="category-filter" value="dresses"> Dresses</label>
+                        </div>
+                    </div>
+
+                    <!-- Gender Filter -->
+                    <div class="filter-group">
+                        <h4>Gender</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="gender-filter" value="" checked> All</label>
+                            <label><input type="checkbox" class="gender-filter" value="men"> Men</label>
+                            <label><input type="checkbox" class="gender-filter" value="women"> Women</label>
+                        </div>
+                    </div>
+
+                    <!-- Size Filter -->
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="size-filter" value="" checked> All</label>
+                            <label><input type="checkbox" class="size-filter" value="S"> S</label>
+                            <label><input type="checkbox" class="size-filter" value="M"> M</label>
+                            <label><input type="checkbox" class="size-filter" value="L"> L</label>
+                            <label><input type="checkbox" class="size-filter" value="XL"> XL</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" id="price-range" min="0" max="5000" value="5000" class="price-slider">
+                        <p>Up to ৳<span id="price-value">5000</span></p>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="clearFilters()" style="width: 100%; margin-top: 20px;">Clear Filters</button>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="shop-main">
+                    <!-- Toolbar -->
+                    <div class="shop-toolbar">
+                        <div class="results-info">
+                            <p>Showing <span id="products-count">0</span> products</p>
+                        </div>
+                        <div class="sort-options">
+                            <select id="sort-select" class="sort-dropdown">
+                                <option value="default">Sort by: Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Top Rated</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                        <button class="filter-toggle-btn" id="filters-toggle">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be loaded here -->
+                    </div>
+
+                    <!-- No Products Message -->
+                    <div class="no-products" id="no-products" style="display: none;">
+                        <p>No products found. Try adjusting your filters.</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>স্বপ্নরঙ</h3>
+                    <p>Style Your Dreams</p>
+                    <p class="footer-description">Modern, affordable fashion for everyone. Quality, comfort, confidence in every piece.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Help & Info</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links footer-social">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-envelope"></i> info@swapnorong.com<br>
+                        <i class="fas fa-phone"></i> +880 130 843 0614
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 স্বপ্নরঙ - SwapnoRong. All rights reserved.</p>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

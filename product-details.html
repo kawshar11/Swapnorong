@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Details - স্বপ্নরঙ - SwapnoRong">
+    <title>Product Details - স্বপ্নরঙ - SwapnoRong</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <p><i class="fas fa-phone"></i> +880 130 843 0614</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <h1>স্বপ্নরঙ</h1>
+                        <p class="tagline">Style Your Dreams</p>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="wishlist.html" class="icon-link">
+                            <i class="far fa-heart"></i>
+                            <span class="badge" id="wishlist-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="badge" id="cart-badge">0</span>
+                        </a>
+                        <button class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span id="breadcrumb-product">Product</span>
+            </div>
+
+            <div class="product-details-container">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image" id="main-image">
+                        👗
+                    </div>
+                    <div class="thumbnail-images">
+                        <img class="thumbnail" onclick="changeImage(this)" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' font-size='50'%3E👗%3C/text%3E%3C/svg%3E" alt="Product view 1">
+                        <img class="thumbnail" onclick="changeImage(this)" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' font-size='50'%3E👕%3C/text%3E%3C/svg%3E" alt="Product view 2">
+                        <img class="thumbnail" onclick="changeImage(this)" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' font-size='50'%3E👔%3C/text%3E%3C/svg%3E" alt="Product view 3">
+                        <img class="thumbnail" onclick="changeImage(this)" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' font-size='50'%3E👖%3C/text%3E%3C/svg%3E" alt="Product view 4">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-details-info">
+                    <div class="product-category" id="product-category">Category</div>
+                    <h1 id="product-name">Product Name</h1>
+
+                    <div class="product-rating">
+                        <span class="stars" id="product-stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-text" id="rating-text">(0 reviews)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="price" id="product-price">৳0</span>
+                        <span class="original-price" id="product-original-price">৳0</span>
+                        <span class="discount" id="discount-badge">Save 20%</span>
+                    </div>
+
+                    <div class="product-description" id="product-description">
+                        Product description will appear here
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="size-selection">
+                        <h3>Select Size</h3>
+                        <div class="size-options" id="size-options">
+                            <!-- Sizes will be populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="color-selection">
+                        <h3>Select Color</h3>
+                        <div class="color-options" id="color-options">
+                            <!-- Colors will be populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selection -->
+                    <div class="quantity-selection">
+                        <h3>Quantity</h3>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <input type="number" id="quantity" value="1" min="1" readonly>
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Stock Status -->
+                    <div class="stock-status" id="stock-status">
+                        <i class="fas fa-check-circle"></i> In Stock
+                    </div>
+
+                    <!-- Add to Cart & Wishlist -->
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" id="add-to-cart-btn" onclick="addToCartFromDetails()">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-outline btn-large" id="add-to-wishlist-btn" onclick="addToWishlistFromDetails()">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+
+                    <!-- Shipping Info -->
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free shipping on orders over ৳1000</span>
+                        </div>
+                        <div class="shipping-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day easy returns</span>
+                        </div>
+                        <div class="shipping-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="openTab(event, 'description')">Description</button>
+                    <button class="tab-btn" onclick="openTab(event, 'specifications')">Specifications</button>
+                    <button class="tab-btn" onclick="openTab(event, 'reviews')">Reviews</button>
+                </div>
+
+                <div id="description" class="tab-content active">
+                    <h3>Product Description</h3>
+                    <p id="detailed-description">Detailed product description will appear here.</p>
+                </div>
+
+                <div id="specifications" class="tab-content">
+                    <h3>Specifications</h3>
+                    <table class="specifications-table">
+                        <tr>
+                            <td>Material</td>
+                            <td id="spec-material">100% Cotton</td>
+                        </tr>
+                        <tr>
+                            <td>Care Instructions</td>
+                            <td id="spec-care">Machine wash cold, dry on low heat</td>
+                        </tr>
+                        <tr>
+                            <td>Available Sizes</td>
+                            <td id="spec-sizes">S, M, L, XL</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-list" id="reviews-list">
+                        <!-- Reviews will be populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>Related Products</h2>
+                <div class="products-grid" id="related-products-grid">
+                    <!-- Related products will be loaded by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>স্বপ্নরঙ</h3>
+                    <p>Style Your Dreams</p>
+                    <p class="footer-description">Modern, affordable fashion for everyone. Quality, comfort, confidence in every piece.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Help & Info</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links footer-social">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-envelope"></i> info@swapnorong.com<br>
+                        <i class="fas fa-phone"></i> +880 130 843 0614
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 স্বপ্নরঙ - SwapnoRong. All rights reserved.</p>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>

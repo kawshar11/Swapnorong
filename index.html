@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="স্বপ্নরঙ - SwapnoRong: Style Your Dreams. Modern, affordable fashion for men and women. Premium quality clothing at reasonable prices.">
+    <meta name="keywords" content="fashion, clothing, mens fashion, womens fashion, affordable fashion, online shopping, Bangladesh">
+    <meta name="author" content="SwapnoRong">
+    <title>স্বপ্নরঙ - SwapnoRong | Style Your Dreams</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <p><i class="fas fa-phone"></i> +880 130 843 0614</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <h1>স্বপ্নরঙ</h1>
+                        <p class="tagline">Style Your Dreams</p>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="wishlist.html" class="icon-link">
+                            <i class="far fa-heart"></i>
+                            <span class="badge" id="wishlist-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="badge" id="cart-badge">0</span>
+                        </a>
+                        <button class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Style Your Dreams</h2>
+                <p>Discover modern, affordable fashion that makes you feel confident</p>
+                <a href="shop.html" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon">👗</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Collections</h2>
+                <p>Explore our curated collections</p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">👔</div>
+                    <h3>Men's Fashion</h3>
+                    <p>Stylish and comfortable wear for modern men</p>
+                    <a href="shop.html?gender=men" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">👗</div>
+                    <h3>Women's Fashion</h3>
+                    <p>Elegant and trendy outfits for every occasion</p>
+                    <a href="shop.html?gender=women" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">⭐</div>
+                    <h3>Best Sellers</h3>
+                    <p>Trending items loved by our customers</p>
+                    <a href="shop.html?sort=trending" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Find what you're looking for</p>
+            </div>
+
+            <div class="categories-grid">
+                <a href="shop.html?category=tshirts" class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>T-Shirts</h3>
+                </a>
+                <a href="shop.html?category=shirts" class="category-card">
+                    <div class="category-icon">👔</div>
+                    <h3>Shirts</h3>
+                </a>
+                <a href="shop.html?category=pants" class="category-card">
+                    <div class="category-icon">👖</div>
+                    <h3>Pants</h3>
+                </a>
+                <a href="shop.html?category=hoodies" class="category-card">
+                    <div class="category-icon">🧥</div>
+                    <h3>Hoodies</h3>
+                </a>
+                <a href="shop.html?category=dresses" class="category-card">
+                    <div class="category-icon">👗</div>
+                    <h3>Dresses</h3>
+                </a>
+                <a href="shop.html" class="category-card">
+                    <div class="category-icon">🎁</div>
+                    <h3>All Items</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="best-sellers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Best Sellers</h2>
+                <p>Our most loved products</p>
+            </div>
+
+            <div class="products-grid" id="bestsellers-grid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+
+            <div class="section-cta">
+                <a href="shop.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose SwapnoRong</h2>
+                <p>The reasons customers love us</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>Premium Quality</h3>
+                    <p>High-quality fabrics and expert craftsmanship in every piece</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium fashion without premium price tags</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping across Bangladesh</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Secure Shopping</h3>
+                    <p>Safe and secure payment methods</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>Hassle-free returns within 30 days</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Customer Support</h3>
+                    <p>Responsive support team ready to help 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for exclusive offers and new arrivals</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>স্বপ্নরঙ</h3>
+                    <p>Style Your Dreams</p>
+                    <p class="footer-description">Modern, affordable fashion for everyone. Quality, comfort, confidence in every piece.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Help & Info</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links footer-social">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-envelope"></i> info@swapnorong.com<br>
+                        <i class="fas fa-phone"></i> +880 130 843 0614
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 স্বপ্নরঙ - SwapnoRong. All rights reserved.</p>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function loadBestSellers() {
+            const bestsellers = productsDatabase.filter(p => p.reviews > 40).slice(0, 6);
+            const grid = document.getElementById('bestsellers-grid');
+            
+            bestsellers.forEach(product => {
+                const card = createProductCard(product);
+                grid.appendChild(card);
+            });
+        }
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <div class="product-image">
+                    ${product.image}
+                </div>
+                <div class="product-info">
+                    <div class="product-category">${product.category}</div>
+                    <h3 class="product-name">${product.name}</h3>
+                    <div class="product-rating">
+                        <span class="stars">${'⭐'.repeat(Math.floor(product.rating))}</span>
+                        <span class="rating-text">(${product.reviews})</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">৳${product.price}</span>
+                        <span class="original-price">৳${product.originalPrice}</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-small btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+                        <button class="btn btn-small btn-outline" onclick="toggleWishlist(${product.id})">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! Check your email for exclusive offers.');
+            this.reset();
+        });
+
+        updateCartBadge();
+        updateWishlistBadge();
+        loadBestSellers();
+    </script>
+</body>
+</html>

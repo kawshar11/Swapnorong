@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping Cart - স্বপ্নরঙ - SwapnoRong">
+    <title>Shopping Cart - স্বপ্নরঙ - SwapnoRong</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <p><i class="fas fa-phone"></i> +880 130 843 0614</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <h1>স্বপ্নরঙ</h1>
+                        <p class="tagline">Style Your Dreams</p>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="wishlist.html" class="icon-link">
+                            <i class="far fa-heart"></i>
+                            <span class="badge" id="wishlist-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="icon-link" style="pointer-events: none;">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="badge" id="cart-badge">0</span>
+                        </a>
+                        <button class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <p>Review your items</p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items-wrapper">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be populated here -->
+                    </div>
+                    <div class="empty-cart" id="empty-cart" style="display: none;">
+                        <div class="empty-icon">🛒</div>
+                        <h2>Your cart is empty</h2>
+                        <p>Start shopping to add items to your cart</p>
+                        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <aside class="cart-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="subtotal">৳0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="shipping-cost">৳0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax (15%)</span>
+                        <span id="tax">৳0</span>
+                    </div>
+                    
+                    <div class="promo-code">
+                        <h3>Promo Code</h3>
+                        <input type="text" id="promo-code" placeholder="Enter code" class="promo-input">
+                        <button onclick="applyPromo()" class="btn btn-outline">Apply</button>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="total">৳0</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+                    <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>স্বপ্নরঙ</h3>
+                    <p>Style Your Dreams</p>
+                    <p class="footer-description">Modern, affordable fashion for everyone. Quality, comfort, confidence in every piece.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Help & Info</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links footer-social">
+                        <a href="https://facebook.com/swapnorong21" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-envelope"></i> info@swapnorong.com<br>
+                        <i class="fas fa-phone"></i> +880 130 843 0614
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 স্বপ্নরঙ - SwapnoRong. All rights reserved.</p>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
